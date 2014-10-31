@@ -18,30 +18,34 @@
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
     /* WORK HERE */
-    NSRange chokeRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
-    NSString *nameminussuffix = [cheeseName stringByReplacingCharactersInRange:chokeRange withString:@""];
+    NSRange chokeRange = [cheeseName rangeOfString:@"cheese" options:NSCaseInsensitiveSearch] ;
+    if (chokeRange.location == NSNotFound)
+    {
+        return cheeseName;
+    }
+    NSString *nameminussuffix = [[cheeseName stringByReplacingCharactersInRange:chokeRange withString:@""] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     return (nameminussuffix);
 }
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
     
-     NSString *printStatement;
+//     NSString *printStatement;
     if (cheeseCount == 1)
     {
         
-        NSString *printStatement = @"1 cheese";
-        return (printStatement);
+        NSString  *printStatement = @"1 cheese";
+         return (printStatement);
         
     }
     else
     
     {
         
-        NSString *printStatement = [NSString stringWithFormat:@"%lu cheeses", (unsigned long)cheeseCount];
+        NSString  *printStatement = [NSString stringWithFormat:@"%lu cheeses", (unsigned long)cheeseCount];
         return (printStatement);
     }
     
-    return (printStatement);
+    // return (printStatement);
 }
 
 @end
