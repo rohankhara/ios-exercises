@@ -10,7 +10,7 @@
 
 @implementation EqualityDeterminer
 
-<<<<<<< HEAD
+
 - (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2
 {
     /* WORK HERE */
@@ -52,8 +52,8 @@
     
      return YES;
     
-=======
-- (BOOL) string:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
+
+- (BOOL) NSString:(NSString *)string1 isTheSameAsString:(NSString *)string2 {
     
     if ([string1 isEqualToString: string2])
         return YES;
@@ -68,11 +68,12 @@
     else return NO;
 }
 
-- (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2 {
+- (BOOL) integer:(NSInteger)integer1 isGreaterThan:(NSInteger)integer2
+    {
 if (integer1 > integer2)
     return YES;
 else return NO;
->>>>>>> my-first-branch
+
 }
 
 @end
