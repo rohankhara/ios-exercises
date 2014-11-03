@@ -34,13 +34,12 @@
 - (NSUInteger) dollarCostForAppleFlavoredVodka {
     /* WORK HERE */
 
-    NSUInteger cost = 24;
+   NSUInteger cost = 24;
     
-    if (self.getsDiscount) {
-        cost *= .75;
-    }
+    NSUInteger cost2 = (self.getsDiscount) ? (cost*0.75) : cost;
     
-    return cost;
+    
+    return cost2;
 }
 
 @end

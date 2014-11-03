@@ -14,50 +14,54 @@
     
     
     
-    if (number < otherNumber)
+     if (number > otherNumber)
+         
+     {
+         NSInteger swapvariable = number;
+         number = otherNumber;
+         otherNumber = swapvariable;
+     }
+    
         
-    {
+    // {
      
        // NSRange numberRange = NSMakeRange(number, otherNumber);
 
         // NSIndexSet *returnValue = [NSIndexSet indexSetWithIndexesInRange: NSMakeRange(number, otherNumber)];
         // NSString *tobereturned = [NSString stringWithFormat:@"%i", (int)returnValue];
-        NSMutableArray *arrayToBeReturned = [NSMutableArray array];
+        // NSMutableArray *arrayToBeReturned = [NSMutableArray array];
+        NSMutableString *stringToBeReturned = [NSMutableString string];
         for (NSInteger i = number; i <= otherNumber; i++)
         {
         
-            [arrayToBeReturned addObject:[NSNumber numberWithInteger:i]];
+            //[arrayToBeReturned addObject:[NSNumber numberWithInteger:i]];
+            [stringToBeReturned appendFormat:@"%i",(int)i];
             
         }
         
-        
-        int len = sizeof(arrayToBeReturned);
+        return stringToBeReturned;
+    
+        /* int len = [arrayToBeReturned count];
         NSMutableString *stringToBeReturned = [NSMutableString string];
         
         for (NSInteger j= 0; j<len; j++)
     
             
         {
-            [stringToBeReturned appendFormat:@"%i", arrayToBeReturned[j]];
-        }
+            [stringToBeReturned appendFormat:@"%i",i];
+        } */
         
-        return stringToBeReturned;
+    
         
-    }
+    // }
     
     
-    if (number > otherNumber);
-    
-    {
-    }
-    
-    
-    if (number == otherNumber)
+   /* if (number == otherNumber)
     {
         NSString *tobereturned = [NSString stringWithFormat:@"%i", (int)number];
         return  tobereturned;
-    }
-    return nil;
+    } */
+//    return nil;
 }
 
 @end
