@@ -19,7 +19,8 @@
 
 - (NSString *) stringOfStarTrekCharactersFromArray:(NSArray *)characterArray {
     // NSMutableArray *inputArray = [characterArray mutableCopy];
-    NSString *stringToBeReturned = [[characterArray valueForKey:@"description"] componentsJoinedByString:@";"];
+    // NSString *stringToBeReturned = [[characterArray valueForKey:@"description"] componentsJoinedByString:@";"];
+    NSString *stringToBeReturned = [characterArray componentsJoinedByString:@";"];
     /* for (int i=1; i<= inputArray.count; i++)
     
     {
