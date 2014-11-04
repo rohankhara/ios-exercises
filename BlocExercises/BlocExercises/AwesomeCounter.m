@@ -29,29 +29,29 @@
 
         // NSIndexSet *returnValue = [NSIndexSet indexSetWithIndexesInRange: NSMakeRange(number, otherNumber)];
         // NSString *tobereturned = [NSString stringWithFormat:@"%i", (int)returnValue];
-        // NSMutableArray *arrayToBeReturned = [NSMutableArray array];
-        NSMutableString *stringToBeReturned = [NSMutableString string];
+        NSMutableArray *arrayToBeReturned = [NSMutableArray array];
+       // NSMutableString *stringToBeReturned = [NSMutableString string];
         for (NSInteger i = number; i <= otherNumber; i++)
         {
         
-            //[arrayToBeReturned addObject:[NSNumber numberWithInteger:i]];
-            [stringToBeReturned appendFormat:@"%i",(int)i];
+            [arrayToBeReturned addObject:[NSNumber numberWithInteger:i]];
+            // [stringToBeReturned appendFormat:@"%i",(int)i];
             
         }
-        
-        return stringToBeReturned;
     
-        /* int len = [arrayToBeReturned count];
-        NSMutableString *stringToBeReturned = [NSMutableString string];
+    
+    
+         NSUInteger len = [arrayToBeReturned count];
+       NSMutableString *stringToBeReturned = [NSMutableString string];
         
-        for (NSInteger j= 0; j<len; j++)
+     for (NSInteger j= 0; j<len; j++)
     
             
         {
-            [stringToBeReturned appendFormat:@"%i",i];
-        } */
+            [stringToBeReturned appendFormat:@"%@",arrayToBeReturned[j]];
+        }
         
-    
+    return stringToBeReturned;
         
     // }
     
