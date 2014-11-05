@@ -10,6 +10,10 @@
 
 @interface StuffRememberer : NSObject
 
+@property (assign) CGFloat floatToBeReturned;
+@property (copy) NSMutableArray *arrayToBeCopied;
+@property (assign) NSMutableArray *arrayToBeReturned;
+
 /*
  
  In this class, there are three pairs of methods.
